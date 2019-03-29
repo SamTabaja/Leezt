@@ -1,0 +1,59 @@
+@import url("https://fonts.googleapis.com/css?family=Raleway");
+$activeColor: black;
+.btn {
+  width: 100px;
+  height: 40px;
+  background: $activeColor;
+  color: white;
+  border: 1px solid $activeColor;
+  font-size: 16px;
+  font-weight: bold;
+  font-family: "Raleway", sans-serif;
+  cursor: pointer;
+  margin: 0 0.5em 0 0.5em;
+  &:hover {
+    transition: all 0.5s ease-out;
+    background: white;
+    color: $activeColor;
+  }
+}
+
+@media (max-width: 500px) {
+  .btn {
+    width: 80px;
+    height: 35px;
+    font-size: 16px;
+    margin: 0 0.2em 0 0.2em;
+  }
+}
+@media screen and (max-width: 768px) {
+  .pagiNav {
+    .pagination {
+      .page-item {
+        margin: 0.5em 0.1em;
+        .page-link {
+          padding: 4px 8px;
+        }
+      }
+      .active {
+        padding: 8px 14px !important;
+      }
+    }
+  }
+}
+
+@media screen and (min-width: 769px) and (max-width: 1170px) {
+  .pagiNav {
+    .pagination {
+      .page-item {
+        margin: 0.5em 0.25em;
+        .page-link {
+          padding: 4px 8px;
+        }
+      }
+      .active {
+        padding: 8px 14px !important;
+      }
+    }
+  }
+}

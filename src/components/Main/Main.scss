@@ -1,0 +1,27 @@
+$activeColor: black;
+.mainWrapper {
+  margin: 5em 0 2em 0;
+}
+.mainTop {
+  margin-bottom: 2em;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  .topDivs {
+    padding: 1em;
+    margin: 0 1em;
+  }
+}
+
+.main {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+@media screen and (min-width: 750px) and (max-width: 1170px) {
+  .mainTop {
+    display: grid;
+    grid-template-columns: 1fr;
+  }
+}

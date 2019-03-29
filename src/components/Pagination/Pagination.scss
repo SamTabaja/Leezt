@@ -1,0 +1,86 @@
+$activeColor: black;
+
+.pagiNav {
+  display: flex;
+  justify-content: center;
+  margin: 4em 0 2em 0;
+  .pagination {
+    list-style: none;
+    .page-item {
+      float: left;
+      margin: 0.1em;
+
+      .page-link {
+        font-size: 16px;
+        font-weight: 500;
+        border: 1px solid lightgray;
+        padding: 8px 16px;
+        cursor: pointer;
+
+        &:hover {
+          background: lightgray;
+        }
+      }
+    }
+  }
+  .active {
+    color: white;
+    background: $activeColor;
+    padding: 12px 20px !important;
+    &:hover {
+      color: white;
+      background: $activeColor;
+    }
+  }
+}
+
+@media (max-width: 500px) {
+  .pagiNav {
+    margin: auto 1em auto 0;
+    .pagination {
+      display: grid;
+      grid-template-columns: repeat(8, 1fr);
+      .page-item {
+        margin: 0.5em 0.1em;
+        .page-link {
+          padding: 4px 8px;
+        }
+      }
+      .active {
+        padding: 6px 12px !important;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .pagiNav {
+    .pagination {
+      .page-item {
+        margin: 0.5em 0.1em;
+        .page-link {
+          padding: 4px 8px;
+        }
+      }
+      .active {
+        padding: 8px 14px !important;
+      }
+    }
+  }
+}
+
+@media screen and (min-width: 769px) and (max-width: 1170px) {
+  .pagiNav {
+    .pagination {
+      .page-item {
+        margin: 0.5em 0.25em;
+        .page-link {
+          padding: 4px 8px;
+        }
+      }
+      .active {
+        padding: 8px 14px !important;
+      }
+    }
+  }
+}
