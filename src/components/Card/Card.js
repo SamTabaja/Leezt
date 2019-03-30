@@ -13,8 +13,8 @@ class Card extends Component {
       <div className="card">
         <div className="cardImg">{img}</div>
         <div className="cardInfo">
-          <p className="product noMargin">{productName}</p>
           <p className="brand noMargin">{brandName}</p>
+          <p className="product noMargin">{productName}</p>
           <p className="price noMargin">{`${price} €`}</p>
         </div>
       </div>
