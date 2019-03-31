@@ -11,6 +11,9 @@ class Card extends Component {
     } = this.props;
     return (
       <div className="card">
+        <div className="cardLike">
+          <i class="fa fa-heart-o" aria-hidden="true" />
+        </div>
         <div className="cardImg">{img}</div>
         <div className="cardInfo">
           <p className="brand noMargin">{brandName}</p>

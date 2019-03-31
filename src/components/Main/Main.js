@@ -25,12 +25,9 @@ class Main extends Component {
 
   handlePageChange = newPage => {
     this.setState({ currentPage: newPage });
-    //console.log(newPage);
   };
 
   handleShuffle = () => {
-    let currentPage = this.state.currentPage;
-    currentPage = 1;
     let oldItems = [...this.state.items];
     let items = oldItems.sort(
       (a, b) =>
@@ -38,28 +35,27 @@ class Main extends Component {
         parseInt(b.id) * Math.floor(Math.random() * 100)
     );
 
-    this.setState({ items, currentPage });
+    this.setState({ items, currentPage: 1 });
   };
 
   handleAscOrder = () => {
-    let currentPage = this.state.currentPage;
-    currentPage = 1;
     let oldItems = [...this.state.items];
     let items = oldItems.sort(
       (a, b) => a.actual_price - b.actual_price
     );
 
-    this.setState({ items, currentPage });
+    this.setState({ items, currentPage: 1 });
   };
 
   handleDescOrder = () => {
-    let currentPage = this.state.currentPage;
-    currentPage = 1;
     let oldItems = [...this.state.items];
+    let x = oldItems.map(item => item.brand_name);
+    let z = [...new Set(x)];
+    console.log(z);
     let items = oldItems.sort(
       (a, b) => b.actual_price - a.actual_price
     );
-    this.setState({ items, currentPage });
+    this.setState({ items, currentPage: 1 });
   };
 
   handleProductSearch = e => {

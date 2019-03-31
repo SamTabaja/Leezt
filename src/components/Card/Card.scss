@@ -17,6 +17,11 @@ $activeColor: #2c3e50;
     align-items: center;
   }
 
+  .cardLike {
+    text-align: right;
+    padding: 0.5em 1em;
+  }
+
   .cardInfo {
     padding: 1em;
     .price {
