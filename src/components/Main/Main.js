@@ -3,6 +3,7 @@ import Card from "../Card/Card";
 import Img from "../Img/Img";
 import Input from "../Input/Input";
 import Button from "../Button/Button";
+import Like from "../Like/Like";
 import Pagination from "../Pagination/Pagination";
 import { paginate } from "../../common/paginate";
 import "./Main.scss";
@@ -85,6 +86,15 @@ class Main extends Component {
     this.setState({ items: filteredItems });
   };
 
+  handleLike = item => {
+    console.log("like", item);
+    const items = [...this.state.items];
+    const index = items.indexOf(item);
+    items[index] = { ...items[index] };
+    items[index].liked = !items[index].liked;
+    this.setState({ items });
+  };
+
   reset = () => this.setState(this.baseState);
 
   render() {
@@ -149,6 +159,12 @@ class Main extends Component {
           {items.map(item => (
             <Card
               key={item.id}
+              like={
+                <Like
+                  liked={item.liked}
+                  onClick={() => this.handleLike(item)}
+                />
+              }
               img={<Img imgSrc={item.filename} />}
               brandName={item.brand_name}
               productName={item.product_name}

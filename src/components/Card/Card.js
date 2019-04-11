@@ -1,9 +1,11 @@
 import React, { Component } from "react";
+
 import "./Card.scss";
 
 class Card extends Component {
   render() {
     const {
+      like,
       img,
       price,
       productName,
@@ -11,9 +13,7 @@ class Card extends Component {
     } = this.props;
     return (
       <div className="card">
-        <div className="cardLike">
-          <i class="fa fa-heart-o" aria-hidden="true" />
-        </div>
+        <div className="cardLike">{like}</div>
         <div className="cardImg">{img}</div>
         <div className="cardInfo">
           <p className="brand noMargin">{brandName}</p>
